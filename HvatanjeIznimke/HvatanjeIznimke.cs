@@ -20,20 +20,25 @@ namespace Vsite.CSharp
 
         static void Main(string[] args)
         {
-            // TODO: Provjeriti koju iznimku æe baciti metoda faktorjel u donjoj petlji te na osnovu toga...
-            // TODO: Donje petlje obuhvatiti try-catch blokom koji æe prekinuti daljnje raèunanje kada bude baèena iznimka
-
-            {
-                for (int n = 1; n < 20; ++n)
+            // Provjeriti koju iznimku æe baciti metoda faktorjel u donjoj petlji te na osnovu toga...
+            // Donje petlje obuhvatiti try-catch blokom koji æe prekinuti daljnje raèunanje kada bude baèena iznimka
+            try {
                 {
-                    for (int k = 1; k <= n; ++k)
+                    for (int n = 1; n < 20; ++n)
                     {
-                        int povrh = faktorjel(n) / (faktorjel(k) * faktorjel(n - k));
-                        Console.WriteLine("{0} povrh  {1} = {2}", n, k, povrh);
+                        for (int k = 1; k <= n; ++k)
+                        {
+                            int povrh = faktorjel(n) / (faktorjel(k) * faktorjel(n - k));
+                            Console.WriteLine("{0} povrh  {1} = {2}", n, k, povrh);
+                        }
                     }
                 }
-            }
 
+            }
+            catch (OverflowException e)
+            {
+                    Console.WriteLine(e.Message);
+            }
 
             Console.WriteLine("GOTOVO!!!");
             Console.ReadKey();
