@@ -8,16 +8,16 @@ namespace Vsite.CSharp
     {
         static void Main(string[] args)
         {
-            // TODO: Prije izvoðenja programa pokušati predvidjeti tok programa. Pokrenut program i provjeriti ispravnost pretpostavke
+            // Prije izvoðenja programa pokušati predvidjeti tok programa. Pokrenut program i provjeriti ispravnost pretpostavke
             try
             {
                 Metoda1();
             }
             //// ako bismo ovo zakomentirali, unhandled exception!!!
-            //catch (Exception e)
-            //{
-            //    Console.WriteLine("catch(Exception) u Main");
-            //}
+            catch (Exception e)
+            {
+                Console.WriteLine("catch(Exception) u Main");
+            }
             finally
             {
                 Console.WriteLine("finally u Main");
@@ -36,11 +36,11 @@ namespace Vsite.CSharp
             {
                 Console.WriteLine("catch(ArgumentException) u Metoda1");
             }
-            // TODO: Kako bi izgledalo izvoðenje programa kada bi se izostavio donji blok hvatanja? Zakomenirajte ga i pokrenite program. 
-            catch (DivideByZeroException)
-            {
-                Console.WriteLine("catch(DivideByZeroException) u Metoda1");
-            }
+            // Kako bi izgledalo izvoðenje programa kada bi se izostavio donji blok hvatanja? Zakomenirajte ga i pokrenite program. 
+            //catch (DivideByZeroException)
+            //{
+            //    Console.WriteLine("catch(DivideByZeroException) u Metoda1");
+            //}
             finally
             {
                 Console.WriteLine("finally u Metoda1");
