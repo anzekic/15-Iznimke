@@ -1,1 +1,12 @@
-﻿
+﻿Dijelim s 1
+3
+Podijelio sam s 1
+
+Dijelim s 2
+1
+Podijelio sam s 2
+
+Dijelim s 0
+Iznimka
+
+GOTOVO!!!
